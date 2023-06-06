@@ -1,11 +1,10 @@
 package ru.zenchenko.springcourse.SecondSecurityApp.util;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
-import ru.zenchenko.springcourse.SecondSecurityApp.Service.PeopleService;
+import ru.zenchenko.springcourse.SecondSecurityApp.service.PeopleService;
 import ru.zenchenko.springcourse.SecondSecurityApp.models.Person;
 
 import java.util.Optional;

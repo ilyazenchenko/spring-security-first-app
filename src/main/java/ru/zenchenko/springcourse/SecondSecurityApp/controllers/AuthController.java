@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import ru.zenchenko.springcourse.SecondSecurityApp.Service.RegistrationService;
+import ru.zenchenko.springcourse.SecondSecurityApp.service.RegistrationService;
 import ru.zenchenko.springcourse.SecondSecurityApp.models.Person;
 import ru.zenchenko.springcourse.SecondSecurityApp.util.PersonValidator;
 

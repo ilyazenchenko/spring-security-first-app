@@ -1,4 +1,4 @@
-package ru.zenchenko.springcourse.SecondSecurityApp.Service;
+package ru.zenchenko.springcourse.SecondSecurityApp.service;
 
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
