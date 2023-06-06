@@ -15,10 +15,13 @@ public class RegistrationService {
     private final PeopleRepository peopleRepository;
     private final PasswordEncoder passwordEncoder;
 
+    private final EmailService emailService;
+
     @Autowired
-    public RegistrationService(PeopleRepository peopleRepository, PasswordEncoder passwordEncoder) {
+    public RegistrationService(PeopleRepository peopleRepository, PasswordEncoder passwordEncoder, EmailService emailService) {
         this.peopleRepository = peopleRepository;
         this.passwordEncoder = passwordEncoder;
+        this.emailService = emailService;
     }
 
     @Transactional
@@ -27,6 +30,8 @@ public class RegistrationService {
         person.setPassword(passwordEncoder.encode(person.getPassword()));
         person.setRole("ROLE_USER");
         peopleRepository.save(person);
+        emailService.sendEmail("ilya.zenchenko@icloud.com", "Пользователь сохранен","Ваш " +
+                "пользователь добавлен!!!");
     }
 
 }
