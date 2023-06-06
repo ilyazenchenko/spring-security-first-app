@@ -7,19 +7,22 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import ru.zenchenko.springcourse.SecondSecurityApp.service.AdminService;
 import ru.zenchenko.springcourse.SecondSecurityApp.security.PersonDetails;
+import ru.zenchenko.springcourse.SecondSecurityApp.service.DirectoryService;
 
 @Controller
 public class HelloController {
 
     private final AdminService adminService;
-
+    private final DirectoryService directoryService;
     @Autowired
-    public HelloController(AdminService adminService) {
+    public HelloController(AdminService adminService, DirectoryService directoryService) {
         this.adminService = adminService;
+        this.directoryService = directoryService;
     }
 
     @GetMapping("/hello")
     public String hello() {
+        directoryService.updateFiles();
         return "hello";
     }
 
